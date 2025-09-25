@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <title>Gerar Sorteio</title>
+</head>  
+<body>
+    
+    <div>
+        <img class="logo" src="./assets/logo.png" alt="logo-da-sorte">
+    </div>
+    <div>
+        <label>Gere número do sorteio</label> 
+    
+    </div>
+
+    <div class="inputs-boxes">
+    <div class="input-group">
+        <p>Escolha um número:</p>
+        <input placeholder="digite o número" class="text-box1" type="number">
+    </div>
+
+    <div class="input-group">
+        <p>Entre os números:</p>
+        <input placeholder="digite o número" class="text-box2" type="number">
+    </div>
+    </div>
+     
+    
+
+    <button onclick="generateNumber()">Sortear</button>
+
+    <h1 id="resultado"></h1>
+
+</body>
+<script src="scripts.js"></script>
+</html>

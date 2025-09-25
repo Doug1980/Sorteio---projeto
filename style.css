@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Bungee", sans-serif;
+}
+
+body {
+    margin: 0; /* tira margem padrão */
+    padding: 0;
+    height: 100vh; /* garante altura total */
+    
+    /* imagem */
+    background-image: url("./assets/background1.jpg"); /* caminho da imagem */
+    background-size: cover;    /* cobre toda a tela */
+    background-position: center; /* centraliza */
+    background-repeat: no-repeat; /* não repete */
+    margin-bottom: 0px;   
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* deixa p em cima do input */
+    align-items: center;    /* centraliza no eixo horizontal */
+    gap: 6px;               /* espaço entre texto e input */
+}
+
+.input-group p {
+    color: #fabd62;
+    font-size: 16px;
+    text-shadow: 
+        2px 2px 4px #aaa5a5,     
+        -2px -2px 4px #444; 
+    margin: 0; /* tira espaçamento extra do <p> */
+}
+
+.logo {
+    width: 450px;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0PX;
+}
+
+label {
+    display: flex;         /* garante que o label seja um bloco */
+    width: max-content;     /* largura mínima necessária para o texto */
+    color: aliceblue;
+    margin: -17px auto;         /* centraliza horizontalmente */
+    font-size: 34px;
+    text-align: center;     /* centraliza o texto dentro do label */
+     text-shadow: 
+        2px 2px 4px #aaa5a5,     /* sombra preta */
+        -2px -2px 4px #444;   /* sombra inversa cinza escuro */
+}
+
+.inputs-boxes {
+    display: flex;               
+    justify-content: center;   /* centraliza horizontalmente */
+    align-items: center;       /* centraliza verticalmente dentro do pai */
+    gap: 10px;                 /* espaço entre os inputs (pode diminuir para ficarem mais próximos) */
+    margin: 16px auto;
+    margin-bottom: 20px;         /* aki ajusta a altura */
+}
+
+.inputs-boxes input {
+    width: 234px;              /* largura dos inputs */
+    height: 40px;              /* altura dos inputs */
+    border-radius: 5px;
+    border: 3px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    
+}
+
+
+.text-box1:focus {
+    text-align: center; 
+}
+
+.text-box2:focus {
+    text-align: center; 
+}
+
+button {
+    display: flex;
+    width: 100px;
+    padding: 10px 100px;
+    margin: 0px auto 43px;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 05px;
+    background: #fabd62;
+    box-shadow: 0 18px 40px 0 rgba(174, 195, 70, 0.35);
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    opacity: 0.9;
+}
+button:active {
+    opacity: 0.7;
+
+}
+
+/* h1 {
+    display: flex;
+    width: 30px;
+    padding: 10px 100px;
+    margin: -10px 0px 0px 680px; 
+    justify-content: center;
+    font-size: 100px;
+}
+ */
+
+h1 {
+    display: flex;
+    width: 30px;
+    padding: 29px 100px;
+    margin: -70px auto 0 auto;
+    justify-content: center;
+    font-size: 100px;
+    color: #fff; /* cor do texto */
+    text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0ff;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00f, 0 0 10px #0ff, 0 0 15px #0ff;
+    }
+    to {
+        text-shadow: 0 0 20px #0ff, 0 0 30px #00f, 0 0 40px #0ff;
+    }
+}
+
+/* Responsividade para Galaxy A50 (372px de largura) */
+@media (max-width: 400px) {
+    .logo {
+        width: 220px;   /* ajusta tamanho da logo */
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 20px;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .inputs-boxes {
+        flex-direction: column; /* inputs ficam embaixo do outro */
+        gap: 12px;              /* menos espaço entre eles */
+        align-items: center;
+    }
+
+    .inputs-boxes input {
+        width: 85%;         /* ocupa boa parte da tela */
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 73%;
+        padding: 14px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 40px; /* reduz tamanho do número sorteado */
+        margin-top: 15px;
+    }
+}
